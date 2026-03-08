@@ -8,7 +8,7 @@ import arrow_left from "../assets/images/basil_arrow-up-outline.png";
 import arrow_right from "../assets/images/basil_arrow-up-outline (1).png";
 import "./LogIn-SignUp.css";
 
-export function LogIn() {
+export function CreateAccount() {
   return (
     <div className="main-section">
       <div className="left-container">
@@ -22,9 +22,12 @@ export function LogIn() {
           alt="Eclipse"
           className="eclipse-image-top-right"
         />
-        <h2>Welcome Back!</h2>
+        <h2>Join the Community</h2>
 
-        <p>Your study groups, notes and marketplace are waiting for you.</p>
+        <p>
+          Connect with thousands of Nigerian university students, share notes,
+          trade textbooks and study together.
+        </p>
 
         <ul className="benefits-list">
           <li>
@@ -55,17 +58,35 @@ export function LogIn() {
       </div>
       <div className="right-container">
         <Link className="back-to-home" to="/">
-        <img src={arrow_left} alt="Go back arrow" className="arrow"
-        />  Back to Home
+          <img src={arrow_left} alt="Go back arrow" className="arrow" /> Back to
+          Home
         </Link>
         <div className="form">
-          <h2>
-            <span className="highlight">MyEdu</span>Pal
-          </h2>
-          <p className="sub-text">Sign in to your account</p>
-          <p>Log back in to access your notes, groups and textbooks</p>
+          <p className="create-account-text">Create your account</p>
+          <p>Join thousands of students who are learning and sharing smarter</p>
 
           <form className="signin-form">
+            <label htmlFor="name">Fullname:</label>
+            <input
+              type="text"
+              id="name"
+              name="fullname"
+              placeholder="John Doe"
+              className="form-input"
+              required
+            />
+            <label htmlFor="name">Username:</label>
+            <input
+              type="text"
+              id="name"
+              name="username"
+              placeholder="Classic-John"
+              className="form-input"
+              required
+            />
+            <p className="error-message" id="username-error">
+              Username already taken
+            </p>
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -74,7 +95,20 @@ export function LogIn() {
               placeholder="Enter your email"
               className="form-input"
               required
-              
+            />
+            <p className="error-message" id="email-already-exists-error">
+              This email has already been used.
+            </p>
+            <p className="error-message" id="Invalid-email-error">
+              Invalid or incorrect email.
+            </p>
+            <label>University (optional)</label>
+            <input
+              type="text"
+              id="university"
+              name="university"
+              placeholder="Lagos State University"
+              className="form-input"
             />
             <label htmlFor="password">Password:</label>
             <input
@@ -85,23 +119,18 @@ export function LogIn() {
               className="form-input"
               required
             />
-            <p className="forgot-password-link">
-              <Link to="/forgot-password">Forgot your password?</Link>
-            </p>
-            <button type="submit" className="submit-button">Sign In
-              <img
-              src={arrow_right} 
-              className="arrow"
-              />
+            <button type="submit" className="submit-button create-acct-btn">
+              Create Account
+              <img src={arrow_right} className="arrow" />
             </button>
             <p className="sign-up-link">
-              Don't have an account?
+              Already have an account?
               <span className="highlight">
-                <Link to="/sign-up">Sign Up</Link>
+                <Link to="/">Sign In</Link>
               </span>
             </p>
             <p className="or">Or</p>
-            
+
             <button type="button" className="google-signin">
               Continue with Google
             </button>
