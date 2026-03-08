@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import eclipse_top_left from "../assets/images/Ellipse-top-left.png";
 import eclipse_bottom_right from "../assets/images/Ellipse 1.png";
 import eclipse_bottom_left from "../assets/images/Ellipse 4.png";
@@ -49,7 +48,7 @@ export function VerifyEmail() {
         </div>
         
         <p className="change-email">
-          <Link to="/forgot-password">Change email</Link>
+          Change email
         </p>
         <button type="submit" className="resend-button">
           Resend email
