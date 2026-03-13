@@ -3,17 +3,20 @@ import { Routes, Route } from "react-router-dom";
 import { LogIn } from './Pages/LogIn';
 import { CreateAccount } from './Pages/SignUp';
 import { VerifyEmail } from './Pages/EmailVerification';
-import {ResetPassword} from './Pages/ResetPassword'
-import './App.css'
+import {ResetPassword} from './Pages/ResetPassword';
+import {HomePage} from './Pages/Home'
+import './App.css';
 
 function App() {
   return (
     <>
     <Routes>
-      <Route index element={<VerifyEmail />} />
+      <Route index element={<HomePage/>} />
       <Route path='/sign-up' element={<CreateAccount/>}/>
       <Route path='/log-in' element={<LogIn/>}/>
       <Route path='/reset-password' element={<ResetPassword/>}/>
+      <Route path='/verify-email' element={<VerifyEmail/>}/>
+
     </Routes>
     </>
   )

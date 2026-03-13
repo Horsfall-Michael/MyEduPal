@@ -10,7 +10,7 @@ import "./LogIn-SignUp.css";
 
 export function CreateAccount() {
   return (
-    <div className="main-section">
+    <div className="login-form-main-section">
       <div className="left-container">
         <img
           src={eclipse_top_left}
@@ -63,7 +63,7 @@ export function CreateAccount() {
         </Link>
         <div className="form">
           <p className="create-account-text">Create your account</p>
-          <p>Join thousands of students who are learning and sharing smarter</p>
+          <p className="form-sub-text-2">Join thousands of students who are learning and sharing smarter</p>
 
           <form className="signin-form">
             <label htmlFor="name">Fullname:</label>
@@ -119,7 +119,7 @@ export function CreateAccount() {
               className="form-input"
               required
             />
-            <button type="submit" className="submit-button create-acct-btn">
+            <button type="submit" className="submit-button create-acct-btn login-form-button">
               Create Account
               <img src={arrow_right} className="arrow" />
             </button>
@@ -131,7 +131,7 @@ export function CreateAccount() {
             </p>
             <p className="or">Or</p>
 
-            <button type="button" className="google-signin">
+            <button className="google-signin login-form-button">
               Continue with Google
             </button>
           </form>

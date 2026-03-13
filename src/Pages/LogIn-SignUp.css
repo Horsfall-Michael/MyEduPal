@@ -1,12 +1,9 @@
-.main-section {
+.login-form-main-section {
   display: flex;
   min-height: 100vh;
 }
 .left-container {
-  flex: 1;
   background-color: rgba(21, 41, 98, 1);
-  display: flex;
-  flex-direction: column;
   padding: 40px;
   max-width: 30vw;
   color: white;
@@ -59,8 +56,8 @@
   align-items: center;
   margin-top: 20px;
   gap: 10px;
-  font-weight:300;
-  color:rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
 }
 .list-icon {
   height: 25px;
@@ -69,7 +66,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color:rgba(231, 232, 234, 1);
+  background-color: rgba(231, 232, 234, 1);
 }
 .back-to-home {
   margin-top: 20px;
@@ -81,14 +78,14 @@
   gap: 20px;
   align-items: center;
 }
-.arrow{
+.arrow {
   width: 25px;
 }
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:100%;
+  width: 100%;
 }
 .form h2 {
   margin-top: 20px;
@@ -96,88 +93,111 @@
   color: black;
   font-weight: 600;
 }
-.highlight{
-  color:rgba(21, 41, 98, 1);
+.form-sub-text-2{
+  text-align:center;
+  font-size:0.9rem;
 }
-.sub-text{
+.highlight {
+  color: rgba(21, 41, 98, 1);
+}
+.form-sub-text {
   margin-top: 20px;
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 15px;
+
 }
-.create-account-text{
+.create-account-text {
   margin-top: 20px;
   font-weight: 600;
   font-size: 30px;
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
 }
-form{
-  display:flex;
+form {
+  display: flex;
   justify-content: left;
   flex-direction: column;
-  padding:10px;
+  padding: 10px;
   width: 90%;
-  margin-top:20px;
+  margin-top: 20px;
 }
-label{
+label {
   display: block;
-  margin-bottom:5px;
-  margin-top:25px;
+  margin-bottom: 5px;
+  margin-top: 25px;
 }
-.form-input{
-padding:0.8rem;
-border-radius:10px;
-border: 1px solid rgba(0, 0, 0, 0.75);
+.form-input {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.75);
 }
-.error-message{
-  display:none;
-  color:red;
-  font-size:0.9rem;
-  padding-left:5px;
+.error-message {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  padding-left: 5px;
 }
-.error{
+.error {
   border: 1px solid red;
 }
-.forgot-password-link{
-text-decoration: none;
-text-align: right;
-color:black;
-font-weight: 600;
-margin-bottom:30px;
+.forgot-password-link {
+  text-decoration: none;
+  text-align: right;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-top:10px;
 }
 a:-webkit-any-link {
   color: inherit;
-  text-decoration:none;
+  text-decoration: none;
 }
-.submit-button{
-  background-color:rgba(21, 41, 98, 1);
-  display:flex;
+.submit-button {
+  background-color: rgba(21, 41, 98, 1);
+  display: flex;
   align-items: center;
-  color:white;
+  color: white;
   justify-content: center;
-  padding:0.8rem 0;
-  border:none;
-  border-radius:10px;
-  margin-bottom:30px; 
+  padding: 0.8rem 0;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 30px;
   font-weight: 600;
 }
-.create-acct-btn{
-  margin-top:25px;
+.create-acct-btn {
+  margin-top: 25px;
 }
-.sign-up-link{
-  color:black;
-  text-align:center;
+.sign-up-link {
+  color: black;
+  text-align: center;
   margin-bottom: 30px;
 }
-.or{
-  text-align:center;
-  font-weight: 600;  
+.or {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom:5px;
 }
-.google-signin{
+.google-signin {
   margin-bottom: 30px;
-  padding:1rem 0;
+  padding: 1rem 0;
   background-color: rgba(185, 194, 219, 1);
   border-radius: 10px;
   border: none;
   font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .left-container {
+    display: none;
+  }
+}
+
+@media(max-width:760px){
+  form{
+    margin-top:0;
+  }
+
+  .login-form-button{
+    font-size:1rem;
+  }
 }

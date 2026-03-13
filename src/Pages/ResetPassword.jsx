@@ -54,10 +54,10 @@ export function ResetPassword() {
           />
         </div>
 
-        <button type="submit" className="reset-button">
+        <button type="submit" className="reset-button reset-form-button">
           Reset password
         </button>
-        <button type="button" className="cancel-button">
+        <button type="button" className="cancel-button reset-form-button">
           Cancel
         </button>
       </div>

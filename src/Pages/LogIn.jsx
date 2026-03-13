@@ -10,7 +10,7 @@ import "./LogIn-SignUp.css";
 
 export function LogIn() {
   return (
-    <div className="main-section">
+    <div className="login-form-main-section">
       <div className="left-container">
         <img
           src={eclipse_top_left}
@@ -62,8 +62,8 @@ export function LogIn() {
           <h2>
             <span className="highlight">MyEdu</span>Pal
           </h2>
-          <p className="sub-text">Sign in to your account</p>
-          <p>Log back in to access your notes, groups and textbooks</p>
+          <p className="form-sub-text">Sign in to your account</p>
+          <p className="form-sub-text-2">Log back in to access your notes, groups and textbooks</p>
 
           <form className="signin-form">
             <label htmlFor="email">Email:</label>
@@ -88,7 +88,7 @@ export function LogIn() {
             <p className="forgot-password-link">
               <Link to="/forgot-password">Forgot your password?</Link>
             </p>
-            <button type="submit" className="submit-button">Sign In
+            <button type="submit" className="submit-button login-form-button">Sign In
               <img
               src={arrow_right} 
               className="arrow"
@@ -102,7 +102,7 @@ export function LogIn() {
             </p>
             <p className="or">Or</p>
             
-            <button type="button" className="google-signin">
+            <button className="google-signin login-form-button">
               Continue with Google
             </button>
           </form>

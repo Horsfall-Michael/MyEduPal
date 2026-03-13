@@ -50,10 +50,10 @@ export function VerifyEmail() {
         <p className="change-email">
           Change email
         </p>
-        <button type="submit" className="resend-button">
+        <button type="submit" className="resend-button email-form-button">
           Resend email
         </button>
-        <button type="button" className="back-to-sign-in-btn">
+        <button type="button" className="back-to-sign-in-btn email-form-button">
           Back to Sign in
         </button>
       </div>
