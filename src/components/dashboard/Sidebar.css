@@ -1,0 +1,10 @@
+.sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background: black;
+  color: white;
+}
