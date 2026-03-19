@@ -46,6 +46,9 @@
   color:white;
   border: 2px solid rgba(21, 41, 98, 1)
 }
+.hamburger{
+  display:none;
+}
 .hamburger-nav{
   display:none;
 }

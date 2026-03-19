@@ -27,7 +27,7 @@ export function ResetPassword() {
         alt="Eclipse"
         className="eclipse-image-bottom-right"
       />
-      <div className="reset-form">
+      <div className="reset-form ">
         <h1 className="title">Reset Password</h1>
 
         <div className="password-input">
