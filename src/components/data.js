@@ -1,8 +1,7 @@
 import book_image from "../assets/images/Frame 19.png";
 import chemistry_group_image from "../assets/images/Frame 69.png";
-import engineering_group_image from "../assets/images/Frame 69 (1).png"
+import engineering_group_image from "../assets/images/Frame 69 (1).png";
 import law_group_image from "../assets/images/Frame 69 (2).png";
-
 
 export const books = [
   {
@@ -51,35 +50,124 @@ export const books = [
   },
 ];
 
-
-
-export const groups =[
+export const groups = [
   {
-    id:1,
-    image: chemistry_group_image ,
+    id: 1,
+    image: chemistry_group_image,
     name: "CHM 101 Study Squad",
-    subject:"General Chemistry",
+    subject: "General Chemistry",
     members: 24,
-    state:"Active",
-    lastSeen:2
+    state: "Active",
+    lastSeen: 2,
   },
   {
-    id:2,
-    image: engineering_group_image ,
+    id: 2,
+    image: engineering_group_image,
     name: "Engineerin Math Warriors",
-    subject:"Math 201",
+    subject: "Math 201",
     members: 19,
-    state:"Active",
-    lastSeen:4
+    state: "Active",
+    lastSeen: 4,
   },
   {
-    id:3,
+    id: 3,
     image: law_group_image,
     name: "Law 200 Level Gang",
-    subject:"Constituntional Law",
+    subject: "Constituntional Law",
     members: 31,
-    state:"Active",
-    lastSeen:10
-  }
+    state: "Active",
+    lastSeen: 10,
+  },
 ];
 
+export const user = {
+  name: "John Doe",
+  email: "john.doe@example.com",
+  profilePicture: "https://randomuser.me/api/portraits/men/1.jpg",
+  username: "Unusual",
+  bio: "A passionate learner and avid reader. I love sharing knowledge and connecting with fellow students.",
+  level: 200,
+  department: "Biology",
+  school: "University of Nigeria, Nsukka",
+  schoolAbreviation: "UNN",
+  totalNotesSaved: 12,
+  notesSavedThisweek: 3,
+  groupsJoined: 5,
+  groupActiveStatus: "Active",
+  weeklyHours: 45,
+  dailyHoursGoal: 8,
+  dailyHours: {
+    mon: 2,
+    tue: 5,
+    wed: 3,
+    thur: 7,
+    fri: 4,
+    sat: 6,
+    sun: 1,
+  },
+  activeStreak: 5,
+  recentActivities: [
+    {
+      id: 1,
+      type: "download",
+      description: "Downloaded Physics 201 Past Questions",
+      timestamp: "2026-03-20T14:30:00Z",
+    },
+    {
+      id: 2,
+      type: "group",
+      description: "Joined the 'Math 201 Study Group'",
+      timestamp: "2026-03-20T10:15:00Z",
+    },
+    {
+      id: 3,
+      type: "shared",
+      description: "Shared a note on Organic Chemistry",
+      timestamp: "2026-03-15T16:45:00Z",
+    },
+    {
+      id: 4,
+      type: "message",
+      description: "Commented on CSC 201 Notes Discussion",
+      timestamp: "2026-03-14T09:00:00Z",
+    },
+  ],
+  weeklyStudyHours: [
+    { day: "Monday", hours: 3 },
+    { day: "Tuesday", hours: 4 },
+    { day: "Wednesday", hours: 5 },
+    { day: "Thursday", hours: 2 },
+    { day: "Friday", hours: 6 },
+    { day: "Saturday", hours: 4 },
+    { day: "Sunday", hours: 3 },
+  ],
+  recentMatches: [
+    {
+      name: "Alice Smith",
+      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      school: "UNN",
+      course: "Micro Biology",
+      lastActive: "2026-03-020T12:00:00Z",
+      profileLink: "",
+      userId: 1,
+    },
+    {
+      name: "Bob Johnson",
+      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      school: "Unizik",
+      course: "Bio-Chemistry",
+      lastActive: "2026-03-019T18:30:00Z",
+      profileLink: "",
+      userId: 2,
+    },
+    {
+      name: "Charlie Brown",
+      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      school: "UST",
+      course: "Computer Science",
+      lastActive: "2026-03-018T14:45:00Z",
+      profileLink: "",
+      userId: 3,
+    },
+  ],
+};

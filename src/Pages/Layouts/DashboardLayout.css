@@ -1,0 +1,8 @@
+.dashboard-layout{
+    min-height: 100vh;
+}
+.dashboard-content{
+    background-color:rgba(233, 235, 243, 1);
+    flex-grow: 1;
+    margin-left:25vw ;
+}
