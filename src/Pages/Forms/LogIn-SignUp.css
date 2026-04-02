@@ -1,4 +1,4 @@
-.login-form-main-section {
+.form-main-section {
   display: flex;
   min-height: 100vh;
 }
@@ -138,7 +138,8 @@ label {
   padding-left: 5px;
 }
 .error {
-  border: 1px solid red;
+  color:red;
+  margin:5px;
 }
 .forgot-password-link {
   text-decoration: none;

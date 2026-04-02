@@ -1,4 +1,7 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "../../utils/supabase-client.js";
+import { ConfirmEmailModal } from "./ConfirmEmailModal.jsx";
 import eclipse_top_left from "../../assets/images/Ellipse-top-left.png";
 import eclipse_bottom_right from "../../assets/images/Ellipse 1.png";
 import eclipse_bottom_left from "../../assets/images/Ellipse 4.png";
@@ -9,8 +12,97 @@ import arrow_right from "../../assets/images/basil_arrow-up-outline (1).png";
 import "./LogIn-SignUp.css";
 
 export function CreateAccount() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [university, setUniversity] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+  const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const getSignupErrorMessage = (error) => {
+    if (!error) return "";
+
+    if (error.message.includes("User already registered")) {
+      return "This email is already in use.";
+    }
+
+    if (error.message.includes("Password should")) {
+      return "Password must be at least 6 characters.";
+    }
+
+    if (error.message.includes("invalid format")) {
+      return "Please enter a valid email.";
+    }
+
+    if (error.message.includes("Failed to fetch")) {
+      return "Network error. Check your connection.";
+    }
+
+    if (error.message.includes("violates row-level security")) {
+      return "Internal error. Please try again later.";
+    }
+
+    return "Something went wrong. Try again.";
+  };
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setErrorMsg("");
+
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            name: name,
+            school: university,
+          },
+        },
+      });
+
+      if (error) {
+        setErrorMsg(getSignupErrorMessage(error));
+        console.log(error.message);
+        return;
+      }
+
+      const user = data.user;
+
+      if (!data.session) {
+        setIsModalOpen(true);
+        return;
+      }
+
+      const { error: insertError } = await supabase.from("profiles").upsert([
+        {
+          id: user.id,
+          name,
+          email: user.email,
+          university,
+        },
+      ]);
+
+      if (insertError) {
+        console.log(insertError);
+        setErrorMsg("Failed to save user data.");
+        return;
+      }
+
+      navigate("/dashboard");
+    } catch (err) {
+      console.log(err);
+      setErrorMsg("Unexpected error occurred.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="login-form-main-section">
+    <div className="form-main-section">
       <div className="left-container">
         <img
           src={eclipse_top_left}
@@ -63,50 +155,40 @@ export function CreateAccount() {
         </Link>
         <div className="form">
           <p className="create-account-text">Create your account</p>
-          <p className="form-sub-text-2">Join thousands of students who are learning and sharing smarter</p>
+          <p className="form-sub-text-2">
+            Join thousands of students who are learning and sharing smarter
+          </p>
 
-          <form className="signin-form">
+          <form className="signin-form" onSubmit={handleSignUp}>
             <label htmlFor="name">Fullname:</label>
             <input
               type="text"
               id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               name="fullname"
               placeholder="John Doe"
               className="form-input"
               required
             />
-            <label htmlFor="name">Username:</label>
-            <input
-              type="text"
-              id="name"
-              name="username"
-              placeholder="Classic-John"
-              className="form-input"
-              required
-            />
-            <p className="error-message" id="username-error">
-              Username already taken
-            </p>
             <label htmlFor="email">Email:</label>
             <input
               type="email"
               id="email"
               name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               className="form-input"
               required
             />
-            <p className="error-message" id="email-already-exists-error">
-              This email has already been used.
-            </p>
-            <p className="error-message" id="Invalid-email-error">
-              Invalid or incorrect email.
-            </p>
             <label>University (optional)</label>
             <input
               type="text"
               id="university"
               name="university"
+              value={university}
+              onChange={(e) => setUniversity(e.target.value)}
               placeholder="Lagos State University"
               className="form-input"
             />
@@ -115,26 +197,40 @@ export function CreateAccount() {
               type="password"
               id="password"
               name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter your password"
               className="form-input"
               required
             />
-            <button type="submit" className="submit-button create-acct-btn login-form-button">
-              Create Account
-              <img src={arrow_right} className="arrow" />
+            <p className="error-message" id="email-already-exists-error">
+              {errorMsg}
+            </p>
+            <button
+              type="submit"
+              disabled={loading}
+              className="submit-button create-acct-btn"
+            >
+              {loading ? "Creating account..." : "Create Account"}
+              {!loading && <img src={arrow_right} className="arrow" />}
             </button>
             <p className="sign-up-link">
               Already have an account?
               <span className="highlight">
-                <Link to="/">Sign In</Link>
+                <Link to="/log-in">Sign In</Link>
               </span>
             </p>
             <p className="or">Or</p>
 
-            <button className="google-signin login-form-button">
+            <button className="google-signin login-form-button" type="button">
               Continue with Google
             </button>
           </form>
+          <ConfirmEmailModal
+           isOpen={isModalOpen}
+           
+            onClose={() => setIsModalOpen(false)}
+          />
         </div>
       </div>
     </div>

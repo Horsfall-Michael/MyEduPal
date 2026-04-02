@@ -36,7 +36,7 @@ export function Header() {
           </Link>
 
           <Link to="/sign-up">
-            <button className="signin-btn nav-btn">Sign In</button>
+            <button className="signin-btn nav-btn">Sign Up</button>
           </Link>
         </div>
 

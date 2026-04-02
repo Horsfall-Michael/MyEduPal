@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link, useNavigate} from "react-router-dom";
-import { supabase } from "../utils/supabase-client.jsx";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "../../utils/supabase-client.js";
 
 import eclipse_top_left from "../../assets/images/Ellipse-top-left.png";
 import eclipse_bottom_right from "../../assets/images/Ellipse 1.png";
@@ -18,44 +18,33 @@ export function LogIn() {
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
 
+  
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     setErrorMsg("");
 
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
-    const getErrorMessage = (error) => {
-      if (!error) return "";
-
-      if (error.message.includes("Invalid login credentials")) {
-        return "Incorrect email or password.";
+      if (error) {
+        setErrorMsg(error);
+        setLoading(false);
+        return;
       }
+      console.log("Data recieved:", data)
+      navigate("/dashboard");
+    } catch  {
+      setErrorMsg("Unexpected error occurred."
 
-      if (error.message.includes("Email not confirmed")) {
-        return "Please verify your email before logging in.";
-      }
-
-      if (error.message.includes("Failed to fetch")) {
-        return "Network error. Check your internet connection.";
-      }
-
-      return "Something went wrong. Try again.";
-    };
-
-    if (error) {
-      setErrorMsg(getErrorMessage(error));
-      console.log("login error:", errorMsg);
-      return
-    } else {
-      console.log("Login successful:", data);
-       navigate("/dashboard") 
+      );
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   const handleGoogleLogin = async () => {
@@ -65,16 +54,19 @@ export function LogIn() {
 
     if (error) {
       console.log("Google login error:", error.message);
-      return
-    }
-    else{
-      console.log("Google login data:", data)
-      navigate("/dashboard") 
+      return;
+    } else {
+      await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: "http://localhost:5173/dashboard",
+        },
+      });
+      console.log("Google login data:", data);
     }
   };
-
   return (
-    <div className="login-form-main-section">
+    <div className="form-main-section">
       <div className="left-container">
         <img
           src={eclipse_top_left}
@@ -157,6 +149,8 @@ export function LogIn() {
             <p className="forgot-password-link">
               <Link to="/forgot-password">Forgot your password?</Link>
             </p>
+
+            {errorMsg && <p className="error">{errorMsg}</p>}
             <button
               type="submit"
               className="submit-button login-form-button"
@@ -164,8 +158,6 @@ export function LogIn() {
             >
               {loading ? "Signing in..." : "Sign In "}
               {!loading && <img src={arrow_right} className="arrow" />}
-
-
             </button>
             <p className="sign-up-link">
               Don't have an account?
@@ -175,9 +167,9 @@ export function LogIn() {
             </p>
             <p className="or">Or</p>
 
-            
             <button
               className="google-signin login-form-button"
+              type="button"
               onClick={handleGoogleLogin}
             >
               Continue with Google
