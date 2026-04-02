@@ -50,12 +50,24 @@
   height: 60px;
   margin-bottom: 15px;
 }
-.modal-button {
+.resend-email-button{
   width: 100%;
   padding: 12px;
   border: none;
   border-radius: 10px;
-  background: rgba(21, 41, 98, 1);;
+  background:rgba(185, 194, 219, 1) ;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin: 15px 0;
+}
+.go-to-login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(21, 41, 98, 1);
   color: white;
   font-weight: 600;
   cursor: pointer;

@@ -227,9 +227,8 @@ export function CreateAccount() {
             </button>
           </form>
           <ConfirmEmailModal
-           isOpen={isModalOpen}
-           
-            onClose={() => setIsModalOpen(false)}
+           isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}
+           email={email}
           />
         </div>
       </div>
