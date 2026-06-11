@@ -3,27 +3,60 @@ import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
 export default function Sidebar() {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   return (
     <aside className={`sidebar ${collapsed ? "collapsed" : ""}`}>
-      <div className="sidebar-content"> 
-        <button
-          className="sidebar-toggle"
-          onClick={() => setCollapsed(!collapsed)}
-        >
-          {collapsed ? "☰" : "←"}
-        </button>
-
-        <h1 className="sidebar-logo">
-          {collapsed ? (
-            "EP"
-          ) : (
-            <>
-              MyEdu<span className="sidebar-logo-highlight">Pal</span>
-            </>
-          )}
-        </h1>
+      <div className="sidebar-content">
+        <div className={`sidebar-header ${collapsed ? "collapsed" : ""}`}>
+          <h1 className="sidebar-logo">
+            {collapsed ? (
+              <>
+                E<span className="sidebar-logo-highlight">P</span>{" "}
+              </>
+            ) : (
+              <>
+                MyEdu<span className="sidebar-logo-highlight">Pal</span>
+              </>
+            )}
+          </h1>
+          <div
+            className="sidebar-toggle"
+            onClick={() => setCollapsed(!collapsed)}
+          >
+            {collapsed ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-right-icon lucide-chevron-right"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-left-icon lucide-chevron-left"
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            )}
+          </div>
+        </div>
 
         <div className="sidebar-links">
           <NavLink to="/dashboard" end>
@@ -265,25 +298,38 @@ export default function Sidebar() {
             {collapsed ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="16"
-                viewBox="0 0 16 18"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
                 fill="none"
               >
                 <path
-                  d="M0.75 9.02674C0.75 14.9526 5.1575 16.4342 7.36083 16.4342C8.48917 16.4342 10.1233 16.1367 11.5833 15.2759M13.85 13.1009C14.5017 12.0626 14.9167 10.7276 14.9167 9.02674C14.9167 5.25424 12.5542 2.56007 10.4183 1.01591C9.45333 0.317573 8.25 1.08424 8.25 2.27591V2.54507C8.25 3.74674 7.745 5.94007 6.34167 6.85257C5.625 7.31841 4.85 6.62091 4.76333 5.77091L4.69167 5.07257C4.60833 4.26091 3.78167 3.76841 3.13333 4.26341C2.50181 4.74292 1.9673 5.33823 1.55833 6.01757"
+                  d="M2.88675 14.0233C1.66675 13.0475 1.66675 12.3092 1.66675 9.16667C1.66675 6.02417 1.66675 4.4525 2.88675 3.47667C4.10841 2.5 6.07175 2.5 10.0001 2.5C13.9284 2.5 15.8926 2.5 17.1126 3.47667C18.3326 4.45333 18.3334 6.02417 18.3334 9.16667C18.3334 12.3092 18.3334 13.0475 17.1126 14.0233C15.8934 15 13.9284 15 10.0001 15C7.90841 15 6.83341 16.4483 5.00008 17.5V14.8233C4.08841 14.6875 3.41758 14.4483 2.88675 14.0233Z"
+                  fill="#0D183A"
                   stroke="currentColor"
                   stroke-width="1.5"
                   stroke-linecap="round"
-                />
-                <path
-                  d="M4.91675 13.4717C4.91675 15.8417 6.99091 16.4343 8.02758 16.4343C8.93591 16.4343 10.7501 15.8417 10.7501 13.4717C10.7501 12.5534 10.2584 11.9342 9.78342 11.5767C9.45175 11.3276 8.98592 11.5518 8.87175 11.9509C8.72342 12.4709 8.18591 12.7976 7.91175 12.3309C7.66175 11.9043 7.66175 11.2643 7.66175 10.8784C7.66175 10.3484 7.12841 10.0051 6.69925 10.3168C5.83841 10.9418 4.91675 12.0009 4.91675 13.4717Z"
-                  stroke="currentColor"
-                  stroke-width="1.5"
+                  stroke-linejoin="round"
                 />
               </svg>
             ) : (
               <div>
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M2.88675 14.0233C1.66675 13.0475 1.66675 12.3092 1.66675 9.16667C1.66675 6.02417 1.66675 4.4525 2.88675 3.47667C4.10841 2.5 6.07175 2.5 10.0001 2.5C13.9284 2.5 15.8926 2.5 17.1126 3.47667C18.3326 4.45333 18.3334 6.02417 18.3334 9.16667C18.3334 12.3092 18.3334 13.0475 17.1126 14.0233C15.8934 15 13.9284 15 10.0001 15C7.90841 15 6.83341 16.4483 5.00008 17.5V14.8233C4.08841 14.6875 3.41758 14.4483 2.88675 14.0233Z"
+                  fill="#0D183A"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
                 <span>Study Groups </span>
               </div>
             )}
@@ -293,25 +339,36 @@ export default function Sidebar() {
           {collapsed ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="16"
-              viewBox="0 0 16 18"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-settings-icon lucide-settings"
             >
-              <path
-                d="M0.75 9.02674C0.75 14.9526 5.1575 16.4342 7.36083 16.4342C8.48917 16.4342 10.1233 16.1367 11.5833 15.2759M13.85 13.1009C14.5017 12.0626 14.9167 10.7276 14.9167 9.02674C14.9167 5.25424 12.5542 2.56007 10.4183 1.01591C9.45333 0.317573 8.25 1.08424 8.25 2.27591V2.54507C8.25 3.74674 7.745 5.94007 6.34167 6.85257C5.625 7.31841 4.85 6.62091 4.76333 5.77091L4.69167 5.07257C4.60833 4.26091 3.78167 3.76841 3.13333 4.26341C2.50181 4.74292 1.9673 5.33823 1.55833 6.01757"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-              <path
-                d="M4.91675 13.4717C4.91675 15.8417 6.99091 16.4343 8.02758 16.4343C8.93591 16.4343 10.7501 15.8417 10.7501 13.4717C10.7501 12.5534 10.2584 11.9342 9.78342 11.5767C9.45175 11.3276 8.98592 11.5518 8.87175 11.9509C8.72342 12.4709 8.18591 12.7976 7.91175 12.3309C7.66175 11.9043 7.66175 11.2643 7.66175 10.8784C7.66175 10.3484 7.12841 10.0051 6.69925 10.3168C5.83841 10.9418 4.91675 12.0009 4.91675 13.4717Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
+              <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
+              <circle cx="12" cy="12" r="3" />
             </svg>
           ) : (
             <div>
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-settings-icon lucide-settings"
+            >
+              <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
               <span>Settings</span>
             </div>
           )}
