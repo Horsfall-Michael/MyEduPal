@@ -6,8 +6,11 @@ import { ResetPassword } from "./Pages/Forms/ResetPassword";
 import { HomePage } from "./Pages/Public/Home";
 import DashboardLayout from "./Pages/Layouts/DashboardLayout";
 import {ProtectedRoute} from "./components/ProtectedRoute";
-import Profile from "./Pages/dashboard/Profile";
+import PeerMatching from "./Pages/dashboard/PeerMatching"
+import StudyGroups from "./Pages/dashboard/StudyGroups"
+import TextbookStore from "./Pages/dashboard/TextbookStore"
 import Settings from "./Pages/dashboard/Settings";
+import NotesAndQuestions from "./Pages/dashboard/NotesAndQuestions";
 import DashboardHome from "./Pages/dashboard/DashboardHome";
 import "./App.css";
 
@@ -33,8 +36,11 @@ function App() {
           }
         >
           <Route index element={<DashboardHome />} />
-          <Route path="profile" element={<Profile />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="notes-&-questions" element={<NotesAndQuestions />}/>
+          <Route path="peer-matching" element={<PeerMatching />}/>
+          <Route path="study-groups" element={<StudyGroups/>}/>
+          <Route path="textbook-store" element={<TextbookStore />}/>
         </Route>
       </Routes>
     </>

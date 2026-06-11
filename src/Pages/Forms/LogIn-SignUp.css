@@ -138,8 +138,11 @@ label {
   padding-left: 5px;
 }
 .error {
-  color:red;
+  background-color: rgb(201, 2, 2);
+  color:white;
   margin:5px;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 .forgot-password-link {
   text-decoration: none;

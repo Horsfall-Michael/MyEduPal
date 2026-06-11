@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import {books} from "../components/data.js";
-import location_icon from "../assets/images/famicons_location-outline.png";
-import star_image from "../assets/images/streamline-sharp-color_star-2.png";
+import {books} from "../data/booksData.js";
+import location_icon from "../../assets/images/famicons_location-outline.png";
+import star_image from "../../assets/images/streamline-sharp-color_star-2.png";
 function MarketPlaceSection() {
   return (
     <>

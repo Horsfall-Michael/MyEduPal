@@ -1,8 +1,19 @@
-.dashboard-layout{
-    min-height: 100vh;
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
 }
-.dashboard-content{
-    background-color:rgba(233, 235, 243, 1);
-    flex-grow: 1;
-    margin-left:25vw ;
+
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.dashboard-content {
+  flex: 1; 
+  background-color: rgba(233, 235, 243, 1);
+  padding: 40px 20px 20px 20px;
 }

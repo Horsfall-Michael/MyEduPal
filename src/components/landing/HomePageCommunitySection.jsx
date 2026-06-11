@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { groups } from "../components/data";
-import left_arrow from "../assets/images/basil_arrow-up-outline.png";
-import star_image from "../assets/images/streamline-sharp-color_star-2.png";
-import peer_icon from "../assets/images/Frame 39 (3).png";
-import study_icon from "../assets/images/Frame 39 (2).png";
-import frame_35 from "../assets/images/Frame 39 (5).png";
-import people_icon from "../assets/images/formkit_people.png";
-import green_circle from "../assets/images/Ellipse 7.png"
+import { groups } from "../data/groupsData.js";
+import left_arrow from "../../assets/images/basil_arrow-up-outline.png";
+import star_image from "../../assets/images/streamline-sharp-color_star-2.png";
+import peer_icon from "../../assets/images/Frame 39 (3).png";
+import study_icon from "../../assets/images/Frame 39 (2).png";
+import frame_35 from "../../assets/images/Frame 39 (5).png";
+import people_icon from "../../assets/images/formkit_people.png";
+import green_circle from "../../assets/images/Ellipse 7.png"
 
 function CommunitySection() {
   return (

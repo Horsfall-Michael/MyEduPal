@@ -18,8 +18,6 @@ export function LogIn() {
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
 
-  
-
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -32,16 +30,15 @@ export function LogIn() {
       });
 
       if (error) {
-        setErrorMsg(error);
-        setLoading(false);
+        setErrorMsg(error.message);
         return;
       }
-      console.log("Data recieved:", data)
-      navigate("/dashboard");
-    } catch  {
-      setErrorMsg("Unexpected error occurred."
 
-      );
+      console.log("Data received:", data);
+      navigate("/dashboard");
+    } catch (err) {
+      console.error(err);
+      setErrorMsg("Unexpected error occurred.");
     } finally {
       setLoading(false);
     }
@@ -149,8 +146,8 @@ export function LogIn() {
             <p className="forgot-password-link">
               <Link to="/forgot-password">Forgot your password?</Link>
             </p>
+            {errorMsg &&<div className="error"> <p>{errorMsg}</p></div>}
 
-            {errorMsg && <p className="error">{errorMsg}</p>}
             <button
               type="submit"
               className="submit-button login-form-button"

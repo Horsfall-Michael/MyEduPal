@@ -1,4 +1,4 @@
-import social_icons from "../assets/images/Frame 127.png";
+import social_icons from "../../assets/images/Frame 127.png";
 
 function Footer () {
   return(

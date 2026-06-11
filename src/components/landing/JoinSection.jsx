@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import right_arrow from "../assets/images/basil_arrow-up-outline (1).png"; 
-import star_image from "../assets/images/streamline-sharp-color_star-2.png";
+import right_arrow from "../../assets/images/basil_arrow-up-outline (1).png"; 
+import star_image from "../../assets/images/streamline-sharp-color_star-2.png";
 function JoinSection (){
   return(
     <>

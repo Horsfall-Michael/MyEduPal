@@ -1,5 +1,5 @@
-import dashboard_image from "../assets/images/Frame 112.png";
-import star_image from "../assets/images/streamline-sharp-color_star-2.png";
+import dashboard_image from "../../assets/images/Frame 112.png";
+import star_image from "../../assets/images/streamline-sharp-color_star-2.png";
 
 function DashboardSection (){
   return(

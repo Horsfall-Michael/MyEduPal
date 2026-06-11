@@ -9,10 +9,6 @@
   width: 50px;
   height: 50px;
 }
-.dashboard-home-container {
-  background-color: rgba(233, 235, 243, 1);
-  padding: 40px 20px 20px 20px;
-}
 
 .dashboard-home-container-intro {
   display: flex;
@@ -109,11 +105,11 @@
   padding: 10px;
 }
 .time-stamp {
-  font-size: 12px;
+  font-size: 0.8rem;
   margin-top: 5px;
 }
 .activity-description {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .match-image{
   width:50px;
@@ -146,22 +142,23 @@
   margin-left: 30px;
 }
 .chart {
+  height: 250px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 20px;
-  height: 250px;
 }
+
 .bars {
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
-  gap:20px;
+  gap: 20px;
   height: 100%;
-  width:95%;
+  width: 100%;
 }
 .bar {
   width: 45px;
+  min-height: 2px;
   background: linear-gradient(to top, #152962, #4B61A1);
   border-radius: 20px 20px 0 0;
   display: flex;
@@ -173,5 +170,5 @@
   position: absolute;
   bottom: -20px;
   font-size: 14px;
-  font-weight: 800;;
+  font-weight: 800;
 }

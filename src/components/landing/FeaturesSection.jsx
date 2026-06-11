@@ -1,10 +1,10 @@
-import frame_35 from "../assets/images/Frame 39 (5).png";
-import textbook_icon from "../assets/images/Frame 39 (4).png";
-import peer_icon from "../assets/images/Frame 39 (3).png";
-import study_icon from "../assets/images/Frame 39 (2).png";
-import analytics_icon from "../assets/images/Frame 39 (1).png";
-import share_icon from "../assets/images/Frame 39.png";
-import star_image from "../assets/images/streamline-sharp-color_star-2.png";
+import frame_35 from "../../assets/images/Frame 39 (5).png";
+import textbook_icon from "../../assets/images/Frame 39 (4).png";
+import peer_icon from "../../assets/images/Frame 39 (3).png";
+import study_icon from "../../assets/images/Frame 39 (2).png";
+import analytics_icon from "../../assets/images/Frame 39 (1).png";
+import share_icon from "../../assets/images/Frame 39.png";
+import star_image from "../../assets/images/streamline-sharp-color_star-2.png";
 
 function Features() {
   return (

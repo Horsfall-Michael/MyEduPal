@@ -59,14 +59,14 @@ export function CreateAccount() {
         options: {
           data: {
             name: name,
-            school: university,
+            university: university,
           },
         },
       });
 
       if (error) {
         setErrorMsg(getSignupErrorMessage(error));
-        console.log(error.message);
+        console.log("Signup Error:", error.message);
         return;
       }
 
@@ -77,14 +77,14 @@ export function CreateAccount() {
         return;
       }
 
-      const { error: insertError } = await supabase.from("profiles").upsert([
+      const { error: insertError } = await supabase.auth.signUp(
         {
           id: user.id,
           name,
           email: user.email,
           university,
         },
-      ]);
+      );
 
       if (insertError) {
         console.log(insertError);

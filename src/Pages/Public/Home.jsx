@@ -1,11 +1,11 @@
-import { Header } from "../../components/Header.jsx";
-import HeroSection from "../../components/HeroSection.jsx";
-import Features from "../../components/FeaturesSection.jsx";
-import MarketPlaceSection from "../../components/HomePageMarketSection.jsx";
-import CommunitySection from "../../components/HomePageCommunitySection.jsx";
-import DashboardSection from "../../components/HomePageDashboard.jsx";
-import JoinSection from "../../components/JoinSection.jsx";
-import Footer from "../../components/Footer.jsx";
+import { Header } from "../../components/landing/Header.jsx";
+import HeroSection from "../../components/landing/HeroSection.jsx";
+import Features from "../../components/landing/FeaturesSection.jsx";
+import MarketPlaceSection from "../../components/landing/HomePageMarketSection.jsx";
+import CommunitySection from "../../components/landing/HomePageCommunitySection.jsx";
+import DashboardSection from "../../components/landing/HomePageDashboard.jsx";
+import JoinSection from "../../components/landing/JoinSection.jsx";
+import Footer from "../../components/landing/Footer.jsx";
 
 
 

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import star_image from "../assets/images/streamline-sharp-color_star-2.png";
-import frame_31 from "../assets/images/Frame 31.png";
-import frame_32 from "../assets/images/Frame 32.png";
-import frame_33 from "../assets/images/Frame 33.png";
-import frame_34 from "../assets/images/Frame 34.png";
-import right_arrow from "../assets/images/basil_arrow-up-outline (1).png";
+import star_image from "../../assets/images/streamline-sharp-color_star-2.png";
+import frame_31 from "../../assets/images/Frame 31.png";
+import frame_32 from "../../assets/images/Frame 32.png";
+import frame_33 from "../../assets/images/Frame 33.png";
+import frame_34 from "../../assets/images/Frame 34.png";
+import right_arrow from "../../assets/images/basil_arrow-up-outline (1).png";
 
 function HeroSection() {
   return (
