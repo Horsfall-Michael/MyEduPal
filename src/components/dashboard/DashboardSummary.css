@@ -1,0 +1,33 @@
+.dashboard-summary {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.dashboard-summary-flex-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 25%;
+}
+
+.summary-card-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.summary-card-title img {
+  width: 15px;
+}
+
+.summary-flex-card-main-digit {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.summary-flex-card-green-text {
+  color: rgb(8, 77, 70);
+  font-size: 12px;
+}

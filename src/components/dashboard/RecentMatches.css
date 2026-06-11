@@ -1,0 +1,25 @@
+.recent-matches {
+  width: auto;
+}
+
+.match-image {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.match-name {
+  font-weight: 600;
+}
+
+.match-details {
+  font-size: 12px;
+}
+
+.match-course {
+  margin-left: 5px;
+}
+
+.vector-icon {
+  margin-left: auto;
+  margin-right: 10px;
+}

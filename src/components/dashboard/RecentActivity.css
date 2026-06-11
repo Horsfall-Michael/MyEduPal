@@ -1,0 +1,45 @@
+.dashboard-overview-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+.dashboard-overview-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.dashboard-overview-list {
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard-list-style {
+  background-color: rgb(233, 235, 243);
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.recent-activity-icon {
+  background-color: rgb(185, 194, 219);
+  border-radius: 50%;
+  width: 17px;
+  padding: 10px;
+}
+
+.activity-description {
+  font-size: 1rem;
+}
+
+.time-stamp {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}

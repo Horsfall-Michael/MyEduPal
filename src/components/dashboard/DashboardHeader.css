@@ -1,0 +1,33 @@
+.dashboard-home-container-intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dashboard-level-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.dashboard-level {
+  background-color: rgb(152, 164, 201);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.dashboard-school {
+  border: 1px solid #0d183a;
+  border-radius: 10px;
+  padding: 3px 5px;
+  font-size: 0.9rem;
+}
+
+.dasboard-heading-subtext {
+  margin-top: 0.5rem;
+}

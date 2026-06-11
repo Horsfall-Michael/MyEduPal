@@ -1,0 +1,52 @@
+.weekly-activity-card {
+  background-color: #f8fafc;
+  border-radius: 20px;
+  padding: 30px 10px;
+  width: 45%;
+  position: relative;
+  top: -20px;
+}
+
+.weekly-activity-card-title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.chart {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.bar {
+  width: 45px;
+  min-height: 2px;
+  background: linear-gradient(
+    to top,
+    #152962,
+    #4b61a1
+  );
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.bar span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 14px;
+  font-weight: 800;
+}
