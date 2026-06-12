@@ -1,3 +1,4 @@
+import "./ComingSoon.css"
 function ComingSoon({ title }) {
   return (
     <div className="body">

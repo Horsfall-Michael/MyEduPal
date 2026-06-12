@@ -1,19 +1,19 @@
 .body {
-  padding: 20px;
   height:100vh;
 }
 
 /* header stays normal */
 .header {
   text-align: left;
+  font-size:24px;
 }
 
 /* ONLY center the svg section */
 .svg-wrapper {
   display: flex;
   justify-content: center;
-  align-content: center;
-  margin-top: 60px;
+  align-items: center;
+  height: 70vh;
 }
 
 .svg-container {
@@ -22,5 +22,4 @@
   align-items: center;
   text-align: center;
   gap: 10px;
-  margin-top: 80px;
 }
