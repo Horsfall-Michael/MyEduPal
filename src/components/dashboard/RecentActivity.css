@@ -2,8 +2,9 @@
   background-color: white;
   border-radius: 15px;
   padding: 30px;
-  width: 40%;
   margin-bottom: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .dashboard-overview-title {
@@ -31,7 +32,7 @@
 .recent-activity-icon {
   background-color: rgb(185, 194, 219);
   border-radius: 50%;
-  width: 17px;
+  width: 10px;
   padding: 10px;
 }
 

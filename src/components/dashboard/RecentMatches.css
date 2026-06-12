@@ -1,7 +1,3 @@
-.recent-matches {
-  width: auto;
-}
-
 .match-image {
   width: 50px;
   border-radius: 50%;
@@ -22,4 +18,9 @@
 .vector-icon {
   margin-left: auto;
   margin-right: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .recent-matches {
+    width: 50%;
+  }
 }

@@ -28,7 +28,7 @@ function DashboardHome() {
       <DashboardSummary stats={stats} />
 
       <div className="dashboard-overview-container">
-        <div className="dashboard-overview-container-top-flex">
+        <div className="dashboard-overview-container-top">
           <RecentActivities activities={activities} />
 
           <WeeklyActivityChart

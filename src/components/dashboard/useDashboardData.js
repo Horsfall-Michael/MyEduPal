@@ -81,12 +81,13 @@ export const useDashboardData = () => {
         );
       } catch (error) {
         console.error(error);
-
+        /*
         setProfile(DUMMY_PROFILE);
         setStats(DUMMY_STATS);
         setActivities(DUMMY_ACTIVITIES);
         setMatches(DUMMY_MATCHES);
         setWeeklyHours(DUMMY_WEEKLY_HOURS);
+        */
       } finally {
         setLoading(false);
       }

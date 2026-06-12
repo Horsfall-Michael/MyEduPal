@@ -1,23 +1,9 @@
-.sidebar {
-  --sidebar-width: 260px;
- position :relative;
-  width: var(--sidebar-width);
-  left: 0;
-  top: 0;
-  height: 100vh;
-  transition: width 0.3s ease;
-  padding:10px;
-}
-
 .sidebar-content{
-  position: fixed;
+  position :fixed;
   padding-top:20px;
 }
 .sidebar.collapsed {
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-  --sidebar-width: 60px;
+  --sidebar-width: 40px;
   width: var(--sidebar-width);
 }
 .sidebar-header{
@@ -57,12 +43,16 @@
 
 .sidebar a {
   display: flex;
+  gap:20px;
   align-items: center;
   padding: 10px;
   text-decoration: none;
   font-size: 0.9rem;
   border-radius: 10px;
-  white-space: nowrap;
+}
+.sidebar a span {
+ position: relative;
+ top:-4px;
 }
 
 .sidebar a.active {
@@ -71,8 +61,12 @@
 }
 
 .sidebar svg {
-  min-width: 20px;
-  margin-right: 20px;
+  width: 20px;
+  height:20px;
+}
+.link-and-text{
+ display: flex;
+ gap:20px
 }
 .icon{
   color:white;

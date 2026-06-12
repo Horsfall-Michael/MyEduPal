@@ -1,13 +1,14 @@
-body{
-  overflow: hidden;
-}
-
 .dashboard-overview-container {
   margin-top: 30px;
 }
 
-.dashboard-overview-container-top-flex {
-  display: flex;
-  gap: 40px;
-  align-items: center;
+
+
+
+@media screen and (min-width: 768px) {
+  .dashboard-overview-container-top{
+    display: flex;
+    gap:40px;
+    align-items: center;
+  }
 }
