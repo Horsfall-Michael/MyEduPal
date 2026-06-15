@@ -1,0 +1,32 @@
+.searchbar-container {
+  display: flex;
+  width: 105%;
+  flex-direction: row;
+  margin-top:0;
+  position: relative;
+  padding:0;
+}
+
+.searchbar-input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  width:100%;
+}
+
+.searchbar-input:focus {
+  border-color: #4a90e2;
+}
+
+.searchbar-button {
+  color: grey;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  left:-25px;
+  top:2px;
+}
+

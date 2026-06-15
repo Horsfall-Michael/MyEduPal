@@ -1,0 +1,22 @@
+.header-intro {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.heading {
+  font-size: 24px;
+}
+
+
+.heading-subtext {
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .header-intro{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+}

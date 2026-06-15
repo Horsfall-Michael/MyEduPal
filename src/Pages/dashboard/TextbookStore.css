@@ -1,0 +1,44 @@
+.books {
+  display: grid;
+  gap: 20px;
+}
+
+.book-card {
+  width: 250px;
+}
+
+.header-flex{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+
+.add-book-btn{
+  background-color: #0D183A;
+  color: white;
+  border:none;
+  border-radius: 7px;
+  padding: 6px 12px;
+}
+@media screen and (min-width: 728px) {
+  .books {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .book-card {
+    width: 80%;
+  }
+  .header-flex{
+    display:flex;
+    flex-direction: row;
+  }
+  .add-book-btn{
+    width:250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .books {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
