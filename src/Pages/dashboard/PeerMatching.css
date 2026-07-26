@@ -1,0 +1,105 @@
+.peer-header {
+  display: flex;
+  justify-content: space-between;
+}
+.peer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.peer-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+.peer-card-flex {
+  display: flex;
+  gap: 10px;
+}
+.peer-name-div {
+  display: flex;
+  justify-content: space-between;
+}
+.active-tag {
+  color: #1dc939;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.dot {
+  background-color: #1dc939;
+  height: 4px;
+  width: 4px;
+  border-radius: 100%;
+}
+.peer-avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  background-color: #4B61A1;
+}
+.peer-info {
+  flex-grow: 1;
+}
+.peer-name {
+  font-size: 20px;
+}
+.last-message {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.chat-time {
+  font-size: 11px;
+}
+.suggestions{
+  margin-top: 30px;
+}
+.header{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.suggestedpeer-cards{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.suggestedpeer-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+.suggestedpeer-avatar{
+  width:100%;
+}
+.connect-button{
+  background-color: #152962;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:15px;
+  cursor:pointer;
+  width:100%;
+  margin:15px 0px;
+}
+.peer-info{
+  margin-top:5px;
+}
+
+
+
+@media screen and (min-width: 728px) {
+  .last-message {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .peer-avatar {
+    height: 84px;
+    width: 74px;
+  }
+  .suggestedpeer-cards{
+   flex-direction:row;  
+   flex-wrap:wrap;
+  }
+}

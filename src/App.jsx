@@ -12,6 +12,7 @@ import TextbookStore from "./Pages/dashboard/TextbookStore"
 import Settings from "./Pages/dashboard/Settings";
 import NotesAndQuestions from "./Pages/dashboard/NotesAndQuestions";
 import DashboardHome from "./Pages/dashboard/DashboardHome";
+import ChatPage from "./Pages/dashboard/Chat";
 import "./App.css";
 
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="peer-matching" element={<PeerMatching />}/>
           <Route path="study-groups" element={<StudyGroups/>}/>
           <Route path="textbook-store" element={<TextbookStore />}/>
+          <Route path="chat/:conversationId" element={<ChatPage />} />
         </Route>
       </Routes>
     </>

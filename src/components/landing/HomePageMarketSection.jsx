@@ -29,7 +29,7 @@ function MarketPlaceSection() {
 
         <div className="available-books">
           {books.map((book) => (
-            <div key={book.id} className="book-card">
+            <div key={book.id} className="landing-book-card">
               <img
                 src={book.img}
                 alt={book.name}

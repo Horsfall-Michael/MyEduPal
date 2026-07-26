@@ -126,7 +126,7 @@
  width:90%;
  flex-wrap:wrap;
 }
-.book-card{
+.landing-book-card{
   display:grid;
   width:20%;
   padding:10px;

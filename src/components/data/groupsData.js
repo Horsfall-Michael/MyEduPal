@@ -11,6 +11,7 @@ export const groups = [
     members: 24,
     state: "Active",
     lastSeen: 2,
+    description: "A group for students studying general chemistry."
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const groups = [
     members: 19,
     state: "Active",
     lastSeen: 4,
+    description: "A group for students studying engineering mathematics."
   },
   {
     id: 3,
@@ -29,5 +31,6 @@ export const groups = [
     members: 31,
     state: "Active",
     lastSeen: 10,
+    description: "A group for students studying constitutional law."
   },
 ];

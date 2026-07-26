@@ -8,6 +8,7 @@ import RecentMatches from "../../components/dashboard/RecentMatches";
 import { useDashboardData } from "../../components/dashboard/useDashboardData.js";
 
 function DashboardHome() {
+  
   const {
     profile,
     stats,
