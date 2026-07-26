@@ -71,7 +71,8 @@ const StudyGroups = () => {
         <h2 className="header">Suggested Groups</h2>
         <div className="suggestedgroup-cards">
           {suggestedGroups.map((group) => (
-            <div key={group.id} className="studygroup-card">
+            <div className="suggestedgroup-card">
+            <div key={group.id} className="suggestedgroup-card-flex">
               <img
                 src={group.image}
                 alt={group.name}
@@ -85,7 +86,7 @@ const StudyGroups = () => {
                 <p className="peer-info">{group.members}</p>
                 <p className="peer-info">{group.lastSeen}</p>
               </div>
-
+              </div>
               <button className="join-button">Join</button>
             </div>
           ))}
