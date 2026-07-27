@@ -121,7 +121,9 @@ export function LogIn() {
           </p>
 
           <form className="signin-form" onSubmit={handleLogin}>
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" className="form-label">
+              Email:
+            </label>
             <input
               type="email"
               id="email"
@@ -132,7 +134,7 @@ export function LogIn() {
               className="form-input"
               required
             />
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" className="form-label" >Password:</label>
             <input
               type="password"
               id="password"
@@ -144,7 +146,7 @@ export function LogIn() {
               required
             />
             <p className="forgot-password-link">
-              <Link to="/forgot-password">Forgot your password?</Link>
+              <Link to="/reset-password">Forgot your password?</Link>
             </p>
             {errorMsg &&<div className="error"> <p>{errorMsg}</p></div>}
 

@@ -160,7 +160,9 @@ export function CreateAccount() {
           </p>
 
           <form className="signin-form" onSubmit={handleSignUp}>
-            <label htmlFor="name">Fullname:</label>
+            <label htmlFor="name" className="form-label" style={{ marginTop: "0px" }}>
+              Fullname:
+            </label>
             <input
               type="text"
               id="name"
@@ -171,7 +173,9 @@ export function CreateAccount() {
               className="form-input"
               required
             />
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" className="form-label">
+              Email:
+            </label>
             <input
               type="email"
               id="email"
@@ -182,7 +186,9 @@ export function CreateAccount() {
               className="form-input"
               required
             />
-            <label>University (optional)</label>
+            <label htmlFor="university" className="form-label">
+              University (optional):
+            </label>
             <input
               type="text"
               id="university"
@@ -192,7 +198,9 @@ export function CreateAccount() {
               placeholder="Lagos State University"
               className="form-input"
             />
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" className="form-label">
+              Password:
+            </label>
             <input
               type="password"
               id="password"

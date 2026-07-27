@@ -61,10 +61,10 @@ export function Header() {
           <Link to="/">
             <li className="hamburger-navlink">Study Groups</li>
           </Link>
-          <Link to="/">
+          <Link to="log-in">
             <li className="hamburger-navlink">Log In</li>
           </Link>
-          <Link to="/">
+          <Link to="sign-up">
             <li className="hamburger-navlink">Sign Up</li>
           </Link>
         </ul>

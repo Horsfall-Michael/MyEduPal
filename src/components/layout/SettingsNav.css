@@ -1,0 +1,30 @@
+.settings-nav   {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+  background-color: #FEFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  margin-top:20px;
+  margin-bottom:20px;
+  font-size: 14px;
+}
+.settings-nav a{
+  padding: 10px 20px;
+  border-radius: 25px;
+  width:25%;
+  text-align: center;
+}
+.settings-nav a.active {
+  background: #0d183a;
+  color: white;
+}
+@media (min-width:768px){
+  .settings-nav{
+   width:70%;
+   gap: 10px;
+   flex-wrap: nowrap;
+  }
+}

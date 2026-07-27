@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 import eclipse_top_left from "../../assets/images/Ellipse-top-left.png";
 import eclipse_bottom_right from "../../assets/images/Ellipse 1.png";
 import eclipse_bottom_left from "../../assets/images/Ellipse 4.png";
@@ -57,9 +58,11 @@ export function ResetPassword() {
         <button type="submit" className="reset-button reset-form-button">
           Reset password
         </button>
-        <button type="button" className="cancel-button reset-form-button">
-          Cancel
-        </button>
+        <Link to="/log-in">
+          <button type="button" className="cancel-button reset-form-button">
+            Cancel
+          </button>
+        </Link>
       </div>
     </div>
   );

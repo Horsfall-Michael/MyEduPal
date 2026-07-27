@@ -113,7 +113,7 @@
   font-size: 30px;
   margin-bottom: 15px;
 }
-form {
+.signin-form {
   display: flex;
   justify-content: left;
   flex-direction: column;
@@ -121,7 +121,7 @@ form {
   width: 90%;
   margin-top: 20px;
 }
-label {
+.form-label {
   display: block;
   margin-bottom: 5px;
   margin-top: 25px;
@@ -174,7 +174,6 @@ a:-webkit-any-link {
 .sign-up-link {
   color: black;
   text-align: center;
-  margin-bottom: 30px;
 }
 .or {
   text-align: center;

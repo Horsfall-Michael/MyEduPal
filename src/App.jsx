@@ -9,10 +9,14 @@ import {ProtectedRoute} from "./components/ProtectedRoute";
 import PeerMatching from "./Pages/dashboard/PeerMatching"
 import StudyGroups from "./Pages/dashboard/StudyGroups"
 import TextbookStore from "./Pages/dashboard/TextbookStore"
-import Settings from "./Pages/dashboard/Settings";
+import Settings from "./Pages/Layouts/SettingsLayout";
 import NotesAndQuestions from "./Pages/dashboard/NotesAndQuestions";
 import DashboardHome from "./Pages/dashboard/DashboardHome";
 import ChatPage from "./Pages/dashboard/Chat";
+import ProfileSettings from "./Pages/settings/ProfileSetting";
+import AcademicSettings from "./Pages/settings/AcademicSettings";
+import SecuritySettings from "./Pages/settings/SecuritySettings";
+import NotificationSettings from "./Pages/settings/NotificationSettings";
 import "./App.css";
 
 
@@ -37,7 +41,13 @@ function App() {
           }
         >
           <Route index element={<DashboardHome />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="settings" element={<Settings />}>
+            <Route index element={<ProfileSettings />} />
+            <Route path="profile-settings" element={<ProfileSettings />} />
+            <Route path="academic-settings" element={<AcademicSettings />} />
+            <Route path="security-settings" element={<SecuritySettings />} />
+            <Route path="notification-settings" element={<NotificationSettings />} />
+          </Route>
           <Route path="notes-&-questions" element={<NotesAndQuestions />}/>
           <Route path="peer-matching" element={<PeerMatching />}/>
           <Route path="study-groups" element={<StudyGroups/>}/>
