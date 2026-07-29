@@ -1,40 +1,47 @@
-.settings-form{
- margin:auto;
+.settings-form {
+  margin: auto;
 }
 .settings-form-label {
   font-weight: 600;
 }
 .settings-form-input {
-  width:100%;
+  width: 100%;
   padding: 10px;
   background: rgba(248, 250, 252, 1);
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
-.settings-label-container{
-    width: 100%;
+.settings-label-container {
+  width: 100%;
 }
-.save-settings-btn{
-    margin-top: 20px;
-    padding: 10px 30px;
-    background-color: rgba(21, 41, 98, 1);
-    border-radius: 25px;
-    color: white;
-    border:none;
-    margin-left: auto;
-    font-size:14px ;
+.save-settings-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: rgba(21, 41, 98, 1);
+  border-radius: 25px;
+  color: white;
+  border: none;
+  margin-left: auto;
+  font-size: 14px;
 }
-.btn-container{
-    display: flex;
-    justify-content: flex-end;
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.academic-settings-button{
+  position: relative;
+}
+.academic-settings-button{
+  position: absolute;
+  bottom: 10px;
 }
 @media (min-width: 768px) {
   .settings-name-flex {
     display: flex;
     width: 100%;
-    gap:20px;
-  } 
-  .settings-form-input{
-    width:98%;
+    gap: 20px;
+  }
+  .settings-form-input {
+    width: 98%;
   }
 }
