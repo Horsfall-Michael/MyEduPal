@@ -1,9 +1,12 @@
 const DUMMY_PROFILE = {
-  username: "Michael",
-  level: 300,
-  department: "Computer Science",
-  university: "University of Lagos",
-  school_abbreviation: "UNILAG",
+  fullname: "Okolo Chichi",
+  username: "Unusual Fav",
+  level: 400,
+  email:"favour443e3@gmail.com",
+  bio: "Biology Education student UNN",
+  department: "Biology Education",
+  university: "University of Nigeria, Nsukka",
+  school_abbreviation: "UNN",
 };
 
 const DUMMY_STATS = {

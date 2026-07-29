@@ -14,11 +14,11 @@
 .settings-nav a{
   padding: 10px 20px;
   border-radius: 25px;
-  width:25%;
+  background: rgba(252, 253, 253, 1);
   text-align: center;
 }
 .settings-nav a.active {
-  background: #0d183a;
+  background: rgba(21, 41, 98, 1);
   color: white;
 }
 @media (min-width:768px){
