@@ -28,15 +28,43 @@
   display: flex;
   justify-content: flex-end;
 }
-.academic-settings-button-container{
+.academic-settings-button-container {
   position: relative;
 }
-.outside-save-settings-button{
+.outside-save-settings-button {
   position: absolute;
   top: 20px;
-  right:-20px;
+  right: -20px;
 }
-
+.security-setting-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  border: 0.5px solid black;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+.greater-than {
+  font-size: 24px;
+}
+.settings-title {
+  font-size: 16px;
+}
+.log-out-button {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: rgba(215, 17, 4, 1);
+  border-radius: 25px;
+  color: white;
+  border: none;
+  margin-left: auto;
+  font-size: 14px;
+}
 @media (min-width: 768px) {
   .settings-name-flex {
     display: flex;
