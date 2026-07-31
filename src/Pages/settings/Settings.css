@@ -28,13 +28,15 @@
   display: flex;
   justify-content: flex-end;
 }
-.academic-settings-button{
+.academic-settings-button-container{
   position: relative;
 }
-.academic-settings-button{
+.outside-save-settings-button{
   position: absolute;
-  bottom: 10px;
+  top: 20px;
+  right:-20px;
 }
+
 @media (min-width: 768px) {
   .settings-name-flex {
     display: flex;

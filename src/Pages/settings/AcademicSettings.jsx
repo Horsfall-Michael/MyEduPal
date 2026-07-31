@@ -24,7 +24,7 @@ const Academicsettings = () => {
   };
   return (
     <div>
-      <h2>Academic Details</h2>
+      <h2 className="settings-header">Academic Details</h2>
       <p>Keep your school information up to date for better peer matching.</p>
       <form  className="settings-form" onSubmit={handleSubmit}>
         <div className="settings-name-flex">
@@ -49,7 +49,7 @@ const Academicsettings = () => {
       </div>
       </form>
       <div className="btn-container academic-settings-button-container">
-        <button className="save-settings-btn academic-settings-button" type="submit">
+        <button className="save-settings-btn outside-save-settings-button" type="submit">
           Save Changes
         </button>
       </div>

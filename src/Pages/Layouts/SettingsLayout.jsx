@@ -9,7 +9,7 @@ function SettingsLayout() {
   return (
     <div className="settings-layout">
       <div>
-        <h1>Settings Page</h1>
+        <h1 className="settings-header">Settings</h1>
         <p>Manage your EduPal profile and app preferences.</p>
       </div>
 

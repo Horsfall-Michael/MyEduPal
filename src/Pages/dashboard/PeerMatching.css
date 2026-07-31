@@ -1,6 +1,11 @@
 .peer-header {
   display: flex;
+  gap: 5px;
+  flex-direction: column;
   justify-content: space-between;
+}
+.peer-header h1 {
+  font-size: 24px;
 }
 .peer-list {
   display: flex;
@@ -38,7 +43,7 @@
   height: 50px;
   width: 50px;
   border-radius: 10px;
-  background-color: #4B61A1;
+  background-color: #4b61a1;
 }
 .peer-info {
   flex-grow: 1;
@@ -48,48 +53,49 @@
 }
 .last-message {
   font-size: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .chat-time {
   font-size: 11px;
 }
-.suggestions{
+.suggestions {
   margin-top: 30px;
 }
-.header{
+.header {
   font-size: 20px;
   margin-bottom: 30px;
 }
-.suggestedpeer-cards{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
+.suggestedpeer-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .suggestedpeer-card {
   background-color: white;
   border-radius: 15px;
   padding: 10px;
 }
-.suggestedpeer-avatar{
-  width:100%;
+.suggestedpeer-avatar {
+  width: 100%;
 }
-.connect-button{
+.connect-button {
   background-color: #152962;
-  color:white;
-  border:none;
-  padding:10px 15px;
-  border-radius:15px;
-  cursor:pointer;
-  width:100%;
-  margin:15px 0px;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 100%;
+  margin: 15px 0px;
 }
-.peer-info{
-  margin-top:5px;
+.peer-info {
+  margin-top: 5px;
 }
-
-
 
 @media screen and (min-width: 728px) {
+  .peer-header {
+    flex-direction: row;
+  }
   .last-message {
     font-size: 16px;
     margin-bottom: 10px;
@@ -98,8 +104,11 @@
     height: 84px;
     width: 74px;
   }
-  .suggestedpeer-cards{
-   flex-direction:row;  
-   flex-wrap:wrap;
+  .last-message {
+    margin-bottom: 10px;
+  }
+  .suggestedpeer-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
