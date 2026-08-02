@@ -8,6 +8,9 @@
   padding: 10px;
   margin-top:20px;
 }
+.profile-name{
+    font-size: 16px;
+}
 .profile-actions{
     display: flex;
     gap: 30px;

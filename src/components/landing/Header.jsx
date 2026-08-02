@@ -41,9 +41,9 @@ export function Header() {
         </div>
 
         <button onClick={toggleMenu} className="hamburger">
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <span className="hamburger-bar"></span>
+          <span className="hamburger-bar"></span>
+          <span className="hamburger-bar"></span>
         </button>
       </div>
 

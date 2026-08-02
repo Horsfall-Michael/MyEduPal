@@ -92,7 +92,7 @@
   margin-top: 5px;
 }
 
-@media screen and (min-width: 728px) {
+@media  (min-width: 728px) {
   .peer-header {
     flex-direction: row;
   }
@@ -110,5 +110,12 @@
   .suggestedpeer-cards {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 48%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .suggestedpeer-cards {
+    width: auto;
   }
 }

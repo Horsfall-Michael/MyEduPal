@@ -113,7 +113,7 @@ export function LogIn() {
         </Link>
         <div className="form">
           <h2>
-            <span className="highlight">MyEdu</span>Pal
+            <span className="form-highlight">MyEdu</span>Pal
           </h2>
           <p className="form-sub-text">Sign in to your account</p>
           <p className="form-sub-text-2">

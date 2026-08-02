@@ -6,7 +6,7 @@ const SecuritySettings = () => {
       <h2 className="settings-header">Password & Security</h2>
       <p>Secure your Edupal account with a strong password.</p>
 
-      <NavLink to="/change-password">
+      <NavLink to="/reset-password">
         <div className="security-setting-container">
           <div>
             <h2 className="settings-title">Change your password</h2>
@@ -33,11 +33,11 @@ const SecuritySettings = () => {
       </div>
 
       <div className="btn-container academic-settings-button-container">
-        <button
+        <NavLink to="/"><button
           className="log-out-button "
         >
           Log out
-        </button>
+        </button></NavLink>
       </div>
     </div>
   );

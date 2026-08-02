@@ -24,6 +24,7 @@
 }
 .hero-text-highlight{
   color: rgba(21, 41, 98, 1);
+  font-size: 6.5vw;
 }
 .hero-section-subtext{
   font-size: 1.8vw;
@@ -123,12 +124,12 @@
  display:flex;
  justify-content:space-evenly;
  padding: 30px;
- width:90%;
  flex-wrap:wrap;
+ width: 100vw;
 }
 .landing-book-card{
   display:grid;
-  width:20%;
+  width:23%;
   padding:10px;
   background-color:white;
   border-radius: 15px;
@@ -423,7 +424,7 @@ footer{
 }
 
 
-@media(max-width:760px){
+@media(max-width:768px){
   .hero-section{
     padding-top:5vh;
   }
@@ -454,14 +455,12 @@ footer{
     gap:10px;
     justify-items : center;
   }
-  .feature-card{
-    width: 30vw;
-  }
+  
   .section-subtext{
     width:75vw;
   }
   .feature-icon{
-    width:40%
+    width:14%
   }
   .market-place-top-section{
     flex-direction:column;
@@ -478,7 +477,7 @@ footer{
     gap:10px;
     width: 100%;
   }
-  .book-card{
+  .landing-book-card{
     width:40%;
   }
   .book-actual-price{
