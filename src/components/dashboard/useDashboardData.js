@@ -10,98 +10,35 @@ import {
 } from "../UserData";
 
 export const useDashboardData = () => {
-  const [profile, setProfile] = useState(null);
-  const [activities, setActivities] = useState([]);
-  const [matches, setMatches] = useState([]);
-  const [stats, setStats] = useState(null);
-  const [weeklyHours, setWeeklyHours] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const load = async () => {
+    const checkAuth = async () => {
       try {
         const {
           data: { user },
         } = await supabase.auth.getUser();
 
-        if (!user) {
-          setProfile(DUMMY_PROFILE);
-          setStats(DUMMY_STATS);
-          setActivities(DUMMY_ACTIVITIES);
-          setMatches(DUMMY_MATCHES);
-          setWeeklyHours(DUMMY_WEEKLY_HOURS);
-          return;
-        }
-
-        const userId = user.id;
-
-        const [
-          profileRes,
-          statsRes,
-          activitiesRes,
-          matchesRes,
-          weeklyRes,
-        ] = await Promise.all([
-          supabase.from("profiles").select("*").eq("id", userId).single(),
-          supabase.from("stats").select("*").eq("user_id", userId).single(),
-          supabase
-            .from("activities")
-            .select("*")
-            .eq("user_id", userId)
-            .limit(4)
-            .order("created_at", { ascending: false }),
-          supabase.from("matches").select("*").eq("user_id", userId),
-          supabase.rpc("get_weekly_study_hours", {
-            p_user_id: userId,
-          }),
-        ]);
-
-        setProfile(profileRes.data || DUMMY_PROFILE);
-
-        setStats(
-          statsRes.data && Object.keys(statsRes.data).length
-            ? statsRes.data
-            : DUMMY_STATS
-        );
-
-        setActivities(
-          activitiesRes.data?.length
-            ? activitiesRes.data
-            : DUMMY_ACTIVITIES
-        );
-
-        setMatches(
-          matchesRes.data?.length ? matchesRes.data : DUMMY_MATCHES
-        );
-
-        setWeeklyHours(
-          weeklyRes.data?.length
-            ? weeklyRes.data
-            : DUMMY_WEEKLY_HOURS
-        );
+        setUser(user);
       } catch (error) {
-        console.error(error);
-        /*
-        setProfile(DUMMY_PROFILE);
-        setStats(DUMMY_STATS);
-        setActivities(DUMMY_ACTIVITIES);
-        setMatches(DUMMY_MATCHES);
-        setWeeklyHours(DUMMY_WEEKLY_HOURS);
-        */
+        console.error("Auth check failed:", error);
       } finally {
         setLoading(false);
       }
     };
 
-    load();
+    checkAuth();
   }, []);
 
   return {
-    profile,
-    activities,
-    matches,
-    stats,
-    weeklyHours,
+    user,
+    profile: DUMMY_PROFILE,
+    activities: DUMMY_ACTIVITIES,
+    matches: DUMMY_MATCHES,
+    stats: DUMMY_STATS,
+    weeklyHours: DUMMY_WEEKLY_HOURS,
+
     loading,
   };
 };

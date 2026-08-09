@@ -6,11 +6,12 @@ import RecentActivities from "../../components/dashboard/RecentActivity";
 import WeeklyActivityChart from "../../components/dashboard/WeeklyActivityChart";
 import RecentMatches from "../../components/dashboard/RecentMatches";
 import { useDashboardData } from "../../components/dashboard/useDashboardData.js";
+import { useProfile } from "../../Pages/ProfileProvider.jsx";
 
 function DashboardHome() {
+  const { profile } = useProfile();
   
   const {
-    profile,
     stats,
     activities,
     matches,

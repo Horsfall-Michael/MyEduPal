@@ -1,5 +1,4 @@
 import { formatDistanceToNowStrict, isValid } from "date-fns";
-
 import peopleIcon2 from "../../assets/images/formkit_people (1).png";
 import downloadIcon from "../../assets/images/download.svg";
 import shareIcon from "../../assets/images/share.svg";

@@ -5,13 +5,15 @@ import "./Settings.css";
 
 const Academicsettings = () => {
   const { profile, saveProfile } = useProfile();
+
   const [formData, setFormData] = useState(profile);
   const university = formData.university;
   const level = formData.level;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    saveProfile(formData);
+
+    const updatedProfile = { ...profile, university: formData.university, level: formData.level, }; saveProfile(updatedProfile);
   };
 
   const handleChange = (e) => {
@@ -31,8 +33,8 @@ const Academicsettings = () => {
         <div className="settings-label-container">
           <label className="settings-form-label form-label">University:</label>
           <input
-            name="fullname"
-            className="settings-form-input form-input settings-fullname-input"
+            name="university"
+            className="settings-form-input form-input settings-form-input"
             value={university}
             onChange={handleChange}
           ></input>
@@ -40,7 +42,7 @@ const Academicsettings = () => {
         <div className="settings-label-container">
           <label className="settings-form-label form-label">Level:</label>
           <input
-            name="username"
+            name="level"
             className="settings-form-input form-input"
             value={level}
             onChange={handleChange}
