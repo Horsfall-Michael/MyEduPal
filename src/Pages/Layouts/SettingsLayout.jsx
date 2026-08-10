@@ -1,6 +1,6 @@
 import profileImage from "../../assets/Ellipse 12.png";
 import { Outlet } from "react-router-dom";
-import SettingsNav from "../../Components/layout/SettingsNav";
+import SettingsNav from "../../components/layout/SettingsNav";
 import { useProfile } from "../../Pages/ProfileProvider"
 import "./SettingsLayout.css";
 function SettingsLayout() {
