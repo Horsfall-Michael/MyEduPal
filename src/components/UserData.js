@@ -21,17 +21,29 @@ const DUMMY_STATS = {
 
 const DUMMY_ACTIVITIES = [
   {
-    id: 1,
-    type: "note_saved",
-    title: "Saved React Fundamentals Notes",
-    created_at: new Date().toISOString(),
-  },
-  {
-    id: 2,
-    type: "group_joined",
-    title: "Joined CSC 301 Study Group",
-    created_at: new Date().toISOString(),
-  },
+      id: 1,
+      type: "download",
+      description: "Downloaded Physics 201 Past Questions",
+      timestamp: "2026-03-20T14:30:00Z",
+    },
+    {
+      id: 2,
+      type: "group",
+      description: "Joined the 'Math 201 Study Group'",
+      timestamp: "2026-03-20T10:15:00Z",
+    },
+    {
+      id: 3,
+      type: "shared",
+      description: "Shared a note on Organic Chemistry",
+      timestamp: "2026-03-15T16:45:00Z",
+    },
+    {
+      id: 4,
+      type: "message",
+      description: "Commented on CSC 201 Notes Discussion",
+      timestamp: "2026-03-14T09:00:00Z",
+    },
 ];
 
 const DUMMY_MATCHES = [
