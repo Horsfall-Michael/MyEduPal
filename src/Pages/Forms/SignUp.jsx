@@ -12,7 +12,7 @@ import arrow_right from "../../assets/images/basil_arrow-up-outline (1).png";
 import "./LogIn-SignUp.css";
 
 export function CreateAccount() {
-  const [name, setName] = useState("");
+  const [fullname, setName] = useState("");
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("");
   const [password, setPassword] = useState("");
@@ -58,9 +58,10 @@ export function CreateAccount() {
         password,
         options: {
           data: {
-            name: name,
+            fullname: fullname,
             university: university,
           },
+          emailRedirectTo: 'https://myedupal.netlify.app/log-in'
         },
       });
 
@@ -165,8 +166,8 @@ export function CreateAccount() {
             </label>
             <input
               type="text"
-              id="name"
-              value={name}
+              id="fullname"
+              value={fullname}
               onChange={(e) => setName(e.target.value)}
               name="fullname"
               placeholder="John Doe"

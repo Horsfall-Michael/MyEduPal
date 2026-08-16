@@ -31,9 +31,17 @@ export function ProfileProvider({ children }) {
         if (savedProfile) {
           setProfile(JSON.parse(savedProfile));
         } else {
+          const metadata = user.user_metadata || {};
+
           const userProfile = {
             ...DUMMY_PROFILE,
+
             id: user.id,
+
+            
+            name: metadata.fullname || DUMMY_PROFILE.name,
+            email: user.email || DUMMY_PROFILE.email,
+            company: metadata.university || DUMMY_PROFILE.university,
           };
 
           setProfile(userProfile);
