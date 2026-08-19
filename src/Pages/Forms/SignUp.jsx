@@ -61,7 +61,7 @@ export function CreateAccount() {
             fullname: fullname,
             university: university,
           },
-          emailRedirectTo: 'https://myedupal.netlify.app/log-in'
+          emailRedirectTo: `${window.location.origin}/log-in`
         },
       });
 
