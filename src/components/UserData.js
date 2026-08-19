@@ -1,6 +1,6 @@
 const DUMMY_PROFILE = {
   fullname: "Okolo Chichi",
-  username: "Unusual Fav",
+  username: "Demo User",
   level: 400,
   email:"favour443e3@gmail.com",
   bio: "Biology Education student UNN",

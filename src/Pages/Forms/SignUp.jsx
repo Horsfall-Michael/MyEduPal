@@ -12,7 +12,7 @@ import arrow_right from "../../assets/images/basil_arrow-up-outline (1).png";
 import "./LogIn-SignUp.css";
 
 export function CreateAccount() {
-  const [fullname, setName] = useState("");
+  const [full_name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("");
   const [password, setPassword] = useState("");
@@ -58,7 +58,7 @@ export function CreateAccount() {
         password,
         options: {
           data: {
-            fullname: fullname,
+            full_name: full_name,
             university: university,
           },
           emailRedirectTo: `${window.location.origin}/log-in`
@@ -81,7 +81,7 @@ export function CreateAccount() {
       const { error: insertError } = await supabase.auth.signUp(
         {
           id: user.id,
-          name,
+          full_name: user.full_name,
           email: user.email,
           university,
         },
@@ -166,10 +166,10 @@ export function CreateAccount() {
             </label>
             <input
               type="text"
-              id="fullname"
-              value={fullname}
+              id="full_name"
+              value={full_name}
               onChange={(e) => setName(e.target.value)}
-              name="fullname"
+              name="full_name"
               placeholder="John Doe"
               className="form-input"
               required
